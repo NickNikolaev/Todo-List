@@ -1,23 +1,24 @@
 import React, {useState} from 'react';
+import './TodoForm.css';
 
 const TodoForm = props => {
-    const [input, setInput] = useState('');
+    const [todo, setTodo] = useState('');
 
     // Function to handle onChange event
-    const handleChange = event => setInput(event.target.value);
+    const handleChange = event => setTodo(event.target.value);
 
     // Function to handle onSubmit event
     const handleSubmit = event => {
         // Prevent the default behaviour of the submit button
         event.preventDefault();
 
-        // props.onSubmit({
-        //     id: Math.floor(Math.random() * 10000),
-        //     text: input
-        // })
+        props.onSubmit({
+            id: Math.floor(Math.random() * 100000),
+            text: todo
+        })
 
-        // Set the "input" value to empty string
-        setInput('');
+        // Set the "todo" value to empty string
+        setTodo('');
     }
 
     return (
@@ -25,7 +26,7 @@ const TodoForm = props => {
             <input
                 type="text"
                 placeholder="Add a todo"
-                value={input}
+                value={todo}
                 name="text"
                 className="todo-form-input"
                 onChange={handleChange}
