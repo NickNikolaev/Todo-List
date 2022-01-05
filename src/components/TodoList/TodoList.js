@@ -23,10 +23,8 @@ const TodoList = () => {
             <h1>What's the Plan for Today ?</h1>
             <TodoForm addTodo={addTodo} todos={todos}/>
 
-            <div>
-                {/* Pass all todos to the Todo React Component */}
-                {todos.map(todo => <Todo key={todo.id} todo={todo}/>)}
-            </div>
+            {/* Pass all todos to the Todo React Component */}
+            {todos.map(todo => <Todo key={todo.id} todo={todo}/>)}
         </div>
     );
 };
