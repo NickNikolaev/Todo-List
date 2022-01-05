@@ -12,7 +12,8 @@ const TodoForm = props => {
         // Prevent the default behaviour of the submit button
         event.preventDefault();
 
-        props.onSubmit({
+        // Add the new todo to all todos
+        props.addTodo({
             id: Math.floor(Math.random() * 100000),
             text: todo
         })
