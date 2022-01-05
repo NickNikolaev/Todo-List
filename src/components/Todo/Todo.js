@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { RiCloseCircleLine} from "react-icons/ri";
+import {RiCloseCircleLine} from "react-icons/ri";
 import {TiEdit} from "react-icons/ti";
 
 const Todo = todo => {
@@ -10,8 +10,12 @@ const Todo = todo => {
     // });
 
     return (
-        <div key={todo.id}>
-            {todo.text}
+        <div>
+            <div>{todo.text}</div>
+            <div className="icons">
+                <RiCloseCircleLine />
+                <TiEdit />
+            </div>
         </div>
     );
 };

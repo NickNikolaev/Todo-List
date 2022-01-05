@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import './TodoList.css';
+
 import TodoForm from "../TodoForm/TodoForm";
 import Todo from "../Todo/Todo";
 
@@ -23,7 +25,7 @@ const TodoList = () => {
 
             <div>
                 {/* Pass all todos to the Todo React Component */}
-                {todos.map(todo => <Todo todo={todo}/>)}
+                {todos.map(todo => <Todo key={todo.id} todo={todo}/>)}
             </div>
         </div>
     );
