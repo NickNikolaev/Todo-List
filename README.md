@@ -1,9 +1,12 @@
-Todo List, where you can add, edit and delete your tasks for the day
+Todo List, where you can add, edit and delete your tasks for the day.
+
+Markup :  - - - -
+
 Used Technologies:
-- Markup : * HTML
-- Markup : * CSS (SCSS)
-- Markup : * JAVASCRIPT
-- Markup : * REACT
+- HTML
+- CSS (SCSS)
+- Javascript
+- React
 
 How to start:
 - Run "npm install" to install the required node modules
