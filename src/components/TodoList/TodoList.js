@@ -24,13 +24,22 @@ const TodoList = () => {
         setTodos(updatedTodos);
     };
 
+    // Function to update todo
+    const updateTodo = (todoId, newValue) => {
+        console.log('inside update todo', todoId, newValue);
+        // Validate the todo's text
+        if (!newValue.text || /^\s*$/.test(newValue.text)) return;
+
+        setTodos(prev => prev.map(item => (item.id === todoId ? newValue : item)));
+    };
+
     return (
         <div>
             <h1>What's the Plan for Today ?</h1>
-            <TodoForm addTodo={addTodo} todos={todos}/>
+            <TodoForm onSubmit={addTodo} todos={todos}/>
 
             {/* Pass all todos to the Todo React Component */}
-            {todos.map(todo => <Todo key={todo.id} todo={todo} removeTodo={removeTodo} />)}
+            {todos.map(todo => <Todo key={todo.id} todo={todo} removeTodo={removeTodo} updateTodo={updateTodo} />)}
         </div>
     );
 };
