@@ -12,6 +12,9 @@
 .todo-form-input::placeholder {
   color: #e2e2e2;
 }
+.todo-form-input.edit {
+  border: 2px solid #149fff;
+}
 .todo-form-button {
   padding: 16px;
   border: none;
@@ -21,6 +24,10 @@
   background: linear-gradient(90deg, #5d0cff 0%, #9b00fa 100%);
   color: white;
   text-transform: capitalize;
+}
+.todo-form-button.edit {
+  background: linear-gradient(90deg, #149fff 0%, #117aff 100%);
+  padding: 16px 22px;
 }
 
 /*# sourceMappingURL=TodoForm.css.map */

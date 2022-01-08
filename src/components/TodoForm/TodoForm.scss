@@ -12,6 +12,10 @@
     &::placeholder {
       color: rgb(226, 226, 226);
     }
+
+    &.edit {
+      border: 2px solid rgb(20, 159, 255);
+    }
   }
 
   &-button {
@@ -27,5 +31,14 @@
     );
     color: white;
     text-transform: capitalize;
+
+    &.edit {
+      background: linear-gradient(
+                      90deg,
+                      rgba(20, 159, 255, 1) 0%,
+                      rgba(17, 122, 255, 1) 100%
+      );
+      padding: 16px 22px;
+    }
   }
 }
