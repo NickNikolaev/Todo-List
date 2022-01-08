@@ -15,8 +15,14 @@ const TodoList = () => {
         // Add the new todo to "todos" and update the state
         const newTodos = [todo, ...todos];
         setTodos(newTodos);
-        console.log('todos', newTodos)
+        console.log('new todos', newTodos);
     }
+
+    // Function to remove todo from the todo-list
+    const removeTodo = todoId => {
+        const updatedTodos = todos.filter(todo => todo.id !== todoId);
+        setTodos(updatedTodos);
+    };
 
     return (
         <div>
@@ -24,7 +30,7 @@ const TodoList = () => {
             <TodoForm addTodo={addTodo} todos={todos}/>
 
             {/* Pass all todos to the Todo React Component */}
-            {todos.map(todo => <Todo key={todo.id} todo={todo}/>)}
+            {todos.map(todo => <Todo key={todo.id} todo={todo} removeTodo={removeTodo} />)}
         </div>
     );
 };

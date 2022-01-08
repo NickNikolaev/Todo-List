@@ -16,21 +16,38 @@ $third-row-color: linear-gradient(
                 rgba(17, 122, 255, 1) 100%
 );
 
+$fourth-row-color: linear-gradient(
+                90deg,
+                rgba(255, 118, 20, 1) 0%,
+                rgba(255, 84, 17, 1) 100%
+);
+
+@keyframes remove-todo-row{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    display: none;
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
 .todo-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 4px auto;
   color: white;
-  background: linear-gradient(
-                  90deg,
-                  rgba(255, 118, 20, 1) 0%,
-                  rgba(255, 84, 17, 1) 100%
-  );
-
   padding: 16px;
   border-radius: 5px;
   width: 90%;
+
+  &.removed {
+    animation-name: remove-todo-row;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
 
   &:nth-child(4n + 1) {
     background: $first-row-color
@@ -41,7 +58,11 @@ $third-row-color: linear-gradient(
   }
 
   &:nth-child(4n + 3) {
-    background: $first-row-color
+    background: $third-row-color
+  }
+
+  &:nth-child(4n + 4) {
+    background: $fourth-row-color
   }
 }
 

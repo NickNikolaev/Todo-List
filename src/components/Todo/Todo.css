@@ -1,13 +1,27 @@
+@keyframes remove-todo-row {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
 .todo-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 4px auto;
   color: white;
-  background: linear-gradient(90deg, #ff7614 0%, #ff5411 100%);
   padding: 16px;
   border-radius: 5px;
   width: 90%;
+}
+.todo-row.removed {
+  animation-name: remove-todo-row;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 .todo-row:nth-child(4n+1) {
   background: linear-gradient(90deg, #5d0cff 0%, #9b00fa 100%);
@@ -16,7 +30,10 @@
   background: linear-gradient(90deg, #ff0cf1 0%, #fa0087 100%);
 }
 .todo-row:nth-child(4n+3) {
-  background: linear-gradient(90deg, #5d0cff 0%, #9b00fa 100%);
+  background: linear-gradient(90deg, #149fff 0%, #117aff 100%);
+}
+.todo-row:nth-child(4n+4) {
+  background: linear-gradient(90deg, #ff7614 0%, #ff5411 100%);
 }
 
 .icons {
