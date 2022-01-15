@@ -10,4 +10,4 @@ Used Technologies:
 
 -----
 
-Check out the [Project](todo-list-spa.netlify.app)
+Check out the [Project](https://todo-list-spa.netlify.app)
