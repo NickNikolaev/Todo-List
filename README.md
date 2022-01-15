@@ -1,6 +1,6 @@
 Todo List, where you can add, edit and delete your tasks for the day.
 
-Markup :  - - - -
+-----
 
 Used Technologies:
 - HTML
