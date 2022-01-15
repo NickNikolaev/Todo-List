@@ -8,6 +8,6 @@ Used Technologies:
 - Javascript
 - React
 
-How to start:
-- Run "npm install" to install the required node modules
-- Run "npm start" to start the project
+-----
+
+Check out the [Project](todo-list-spa.netlify.app)
